@@ -6,11 +6,20 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# create new project
+flutter create marengoo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# add packages
+flutter pub add <package-name>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# run project
+flutter run -d
+
+# to build project
+flutter run apk --release
+
+# to check issu
+flutter analyze
+
+
+
