@@ -26,7 +26,7 @@ class BottomBarWidget extends StatelessWidget {
             minWidth: Sizes.dimen_80,
             height: Sizes.dimen_60,
             onPressed: () {
-              Navigator.of(context).pop;
+              Navigator.pop(context);
             },
             color: AppColor.bgColor,
             child: const Icon(Icons.arrow_back_ios_new_outlined),

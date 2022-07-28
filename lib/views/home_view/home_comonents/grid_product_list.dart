@@ -17,16 +17,18 @@ class GridProductList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Obx(() {
-        return productController.isLoading.value == false
-            ? GridView.builder(
+    return Obx(() {
+      return productController.isLoading.value == false
+          ? Expanded(
+            child: GridView.builder(
                 padding: const EdgeInsets.only(
                     left: Sizes.dimen_14,
                     right: Sizes.dimen_14,
                     top: Sizes.dimen_14),
+                shrinkWrap: true,
+                primary: true,
                 itemCount: productController.products.length,
-                physics: const NeverScrollableScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     mainAxisExtent: Sizes.dimen_270,
                     crossAxisSpacing: Sizes.dimen_10,
@@ -35,11 +37,11 @@ class GridProductList extends StatelessWidget {
                 itemBuilder: (context, index) {
                   ProductModel item = productController.products[index];
                   return ProductItem(item: item);
-                })
-            : const Center(
-                child: CircularProgressIndicator(),
-              );
-      }),
-    );
+                }),
+          )
+          : const Center(
+              child: CircularProgressIndicator(),
+            );
+    });
   }
 }
