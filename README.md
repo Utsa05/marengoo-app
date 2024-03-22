@@ -1,6 +1,6 @@
 # marengoo
 
-A new Flutter project.
+A new Flutter project: Getx & MVC
 
 ## Getting Started
 
